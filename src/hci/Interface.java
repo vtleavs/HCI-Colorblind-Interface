@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -154,20 +155,37 @@ public class Interface extends javax.swing.JFrame {
         else
            currentStyle = "cube";
         
+        ArrayList<String> rbg = new ArrayList<>();
+        rbg.add("red");
+        rbg.add("brown");
+        rbg.add("green");
+        Collections.shuffle(rbg);
         
-        ArrayList<String> strings = new ArrayList<>();
-        strings.add("red");
-        strings.add("brown");
-        strings.add("blue");
-        strings.add("green");
-        strings.add("yellow");
-        strings.add("purple");  
+        ArrayList<String> bp = new ArrayList<>();
+        bp.add("blue");
+        bp.add("purple");
+        Collections.shuffle(bp);
         
-        for(int i = 1; i <= 6; i++)
-        {
-            String st = strings.get((int)(Math.random() * (6-i) - .0001));
-            currentOrder[i-1] = st;
-            strings.remove(st);
+        ArrayList<String> y = new ArrayList<>();
+        y.add("yellow");
+        
+        ArrayList<ArrayList<String>> colors = new ArrayList<>();
+        colors.add(rbg);
+        colors.add(bp);
+        colors.add(y);
+        Collections.shuffle(colors);
+        
+        int numGroups = colors.size();
+        int orderCounter = 0;
+        for(int i=0; i<numGroups; ++i){
+            ArrayList<String> group = colors.get(i);
+            
+            int numColors = group.size();
+            for(int j=0; j<numColors; ++j){
+                String color = group.get(j);
+                currentOrder[orderCounter] = color;
+                orderCounter++;
+            }
         }
         
         
@@ -287,7 +305,6 @@ public class Interface extends javax.swing.JFrame {
         jButton1.setActionCommand("button1");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
