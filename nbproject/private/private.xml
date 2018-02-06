@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Benji/OneDrive/Documents/Programming/Java/Netbeans%20Projects/HCI/src/hci/HCI.java</file>
             <file>file:/C:/Users/Benji/OneDrive/Documents/Programming/Java/Netbeans%20Projects/HCI/src/hci/Interface.java</file>
+=======
+            <file>file:/home/gwinndr/Programs/Classes/CS459/P1/Interface/src/hci/Interface.java</file>
+            <file>file:/home/gwinndr/Programs/Classes/CS459/P1/Interface/src/hci/HCI.java</file>
+>>>>>>> 5364d9827b0ce40bf6e402c9a91412543b1bd7b7
         </group>
     </open-files>
 </project-private>
